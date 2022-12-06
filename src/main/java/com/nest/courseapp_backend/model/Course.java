@@ -24,12 +24,21 @@ public class Course {
     public Course() {
     }
 
-    public Course(String courseTitle, String courseDescription, String courseVenue, int duration, String courseDate) {
+    public Course(int id, String courseTitle, String courseDescription, String courseVenue, int duration, String courseDate) {
+        this.id = id;
         this.courseTitle = courseTitle;
         this.courseDescription = courseDescription;
         this.courseVenue = courseVenue;
         this.duration = duration;
         this.courseDate = courseDate;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getCourseTitle() {
