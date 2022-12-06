@@ -13,6 +13,8 @@ public class Course {
     @Id
     @GeneratedValue
 
+    private int id;
+
     private String courseTitle;
     private String courseDescription;
     private String courseVenue;
