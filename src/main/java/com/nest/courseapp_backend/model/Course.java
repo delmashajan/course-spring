@@ -15,7 +15,7 @@ public class Course {
     private String courseTitle;
     private String courseDescription;
     private String courseVenue;
-    private int duration;
+    private int  duration;
     private String courseDate;
 
     public Course() {
