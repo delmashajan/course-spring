@@ -29,6 +29,7 @@ public class Coursecontroller {
         dao.save(c);
 
         HashMap<String,String> map = new HashMap<>();
+        map.put("status","success");
 
         return map;
     }
