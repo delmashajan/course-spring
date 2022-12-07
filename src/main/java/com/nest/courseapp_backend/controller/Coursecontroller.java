@@ -5,7 +5,9 @@ import com.nest.courseapp_backend.model.Course;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 
@@ -18,7 +20,7 @@ public class Coursecontroller {
     @CrossOrigin(origins = "*")
 
     @PostMapping(path = "/add",consumes = "application/json",produces = "application/json")
-    public String Addcourse(@RequestBody Course c){
+    public Map<String,String> Addcourse(@RequestBody Course c){
         System.out.println(c.getCourseTitle().toString());
         System.out.println(c.getCourseDescription().toString());
         System.out.println(c.getCourseVenue().toString());
@@ -26,8 +28,9 @@ public class Coursecontroller {
 
         dao.save(c);
 
+        HashMap<String,String> map = new HashMap<>();
 
-        return "welcome to add employee";
+        return map;
     }
 
     @CrossOrigin(origins = "*")
